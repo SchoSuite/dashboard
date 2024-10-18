@@ -68,10 +68,37 @@
         color: var(--fg1);
         background-color: var(--bg2);
         transition: all, 0.5s;
+        position: relative;
+    }
+
+    button::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 7px;
+        transform: translateX(-50%);
+        width: 0%;
+        height: 2px;
+        background-color: var(--yellow);
+        border-radius: 2px;
+        transition: all, 0.2s;
     }
 
     button:hover {
         background-color: var(--bg1);
+    }
+
+    button:hover::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 7px;
+        transform: translateX(-50%);
+        width: 65%;
+        height: 2px;
+        background-color: var(--yellow);
+        border-radius: 2px;
+        transition: all, 0.2s;
     }
 
     button:active {
